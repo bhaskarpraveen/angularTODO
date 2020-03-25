@@ -1,0 +1,14 @@
+<div class="inform">
+<form class="example-form" >
+    
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter item" [(ngModel)]="item" name="item">
+    </mat-form-field> <br>
+    <button mat-button (click)="add()">Submit</button>
+  </form>
+
+</div>
+<div *ngFor="let item of items">
+    
+<mat-card > <mat-checkbox [checked]="checkDone(item.done)" (click)="toggle(checked,item)"><div >{{ item.item }}</div>  </mat-checkbox>&nbsp; &nbsp; <button mat-button (click)="delete(item)">Delete</button> <br> </mat-card> 
+</div>

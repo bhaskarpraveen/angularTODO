@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'practice1';
+  name = '';
+  
+  reset(){
+    this.name=""
+  }
+  check(){
+    if(this.name===''){
+      return true
+    }else{
+      return false
+    }
+  }
 }
